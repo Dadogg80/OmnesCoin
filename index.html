@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Omnia Coin Market Cap</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+    <link rel= "stylesheet" type= "text/css" href= "style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src= "logic.js"></script>
+
+  </head>
+
+  <body>
+
+<!-- Created a container 1 with a navbar Brand and a search button -->
+    <div class="container my-container1">
+      <nav class="navbar navbar-light" >
+        <a class="navbar-brand" id="my-brand">omnia</a>
+        <form class="form-inline">
+          <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search Coin" aria-label="Search" >
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+    </div>
+
+<!-- Created a row with different columns to place the data needed  -->
+   <div class="container my-container2">
+     <div class="row justify-content-center my-row1">
+       <div class="col-md-2 my-col1">
+         <a id="marketCap">Market Cap:</a>
+       </div>
+       <div class="col-md-2 my-col1">
+         <a id="24hVol">24h Vol:</a>
+       </div>
+       <div class="col-md-2 my-col1">
+         <a id="btcDominance">BTC Dominance:</a>
+       </div>
+       <div class="col-md-2 my-col1">
+         <a id="activeCrypto">Cryptocurrencies:</a>
+       </div>
+       <div class="col-md-2 my-col1">
+         <a id="totalMarkets">Markets:</a>
+       </div>
+     </div>
+
+   </div>s
+
+<!-- This is the title -->
+   <div class="container my-container3">
+     <div class="row  my-row">
+       <div class="col text-center my-col2">
+           <h4 class="title">Top 100 Cryptocurrencies by Market Capitalization</h4>
+           <h6 class="title"><i>Andrés Aedo Bootcamp Project - Ivan on Tech Academy</i></h6>
+       </div>
+     </div>
+     <br>
+
+<!-- This are the buttons that lead to filters, Next 100 and View all, there is also a dropdown button to change currencies-->
+     <div class="row justify-content-center">
+       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+         <button type="button" class="btn btn-outline-info">Filters</button>
+            <div class="btn-group" role="group">
+             <button id="btnGroupDrop1" type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD</button>
+               <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                 <a class="dropdown-item" href="#">EUR</a>
+                 <a class="dropdown-item" href="#">BTC</a>
+                 <a class="dropdown-item" href="#">ETH</a>
+                 <a class="dropdown-item" href="#">XRP</a>
+                 <a class="dropdown-item" href="#">BCH</a>
+                 <a class="dropdown-item" href="#">LTC</a>
+                </div>
+         </div>
+         <button type="button" class="btn btn-outline-info">Netx 100</button>
+         <button type="button" class="btn btn-outline-info">View All</button>
+       </div>
+     </div>
+   </div>
+
+<br><br>
+<!-- Here starts the main section of the page -->
+    <div class="container main-section">
+<!--I am creating a Nav dropdown menu for all the Cryptocurrencies, exchanges and a Whatchlist -->
+      <ul class="nav nav-tabs">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cryptocurrencies</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Top 100</a>
+                <a class="dropdown-item" href="#">Full List</a>
+                <a class="dropdown-item" href="#">Derivatives</a>
+                <a class="dropdown-item" href="#">DeFi</a>
+                <a class="dropdown-item" href="#">Storage</a>
+                <a class="dropdown-item" href="#">Market Cap by Circulating Supply</a>
+                <a class="dropdown-item" href="#">Market Cap by Total Supply</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exchanges</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Spot Exchanges</a>
+                  <a class="dropdown-item" href="#">Derivatives Exchanges</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Whatchlist</a>
+              </li>
+        </ul>
+
+<!--I am creating a Nav bar, it should stick to the top and follow the site when scrolling down but it should dissapear in a smaller screen -->
+        <nav class="navbar my-navbar navbar-light bg-light">
+            <div class="col-1 my-column">
+              <a class="stick">Rank</a>
+            </div>
+            <div class="col-2 my-column">
+              <a class="stick">Name</a>
+            </div>
+            <div class="col-2 my-column">
+              <a class="stick">Market Cap</a>
+            </div>
+            <div class="col-1 my-column">
+              <a class="stick">Price</a>
+            </div>
+            <div class="col-1 my-column">
+              <a class="stick">Volume (24h)</a>
+            </div>
+            <div class="col-2 my-column">
+              <a class="stick">Circulating Supply</a>
+            </div>
+            <div class="col-1 my-column">
+              <a class="stick">Change 24h</a>
+            </div>
+            <div class="col-2  my-column">
+              <a class="stick">Price Graph 24h</a>
+            </div>
+          </nav>
+
+<br>
+
+<ul>
+  <li id="bitcoin"></li>
+  <li id="ethereum"></li>
+</ul>
+
+<!--
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+</ul>
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+</ul>
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+</ul>
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+</ul>
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+</ul>
+<ul>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+</ul>
+-->
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </body>
+</html>
