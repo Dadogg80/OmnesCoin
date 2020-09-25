@@ -27,6 +27,10 @@ async function createTable () {
     let coin = await getData();
 
     for(let index = 0; index < 100; index ++){
+// Created a variable to find the image of each coin
+      let imgCoin = coin[index].image;
+
+      console.log(imgCoin);
 
       //adding all information to the table with id "coinTable" in the html file.
       $('#coinTable').append(
@@ -34,6 +38,8 @@ async function createTable () {
         $('<tr class="content-row table-dark"></tr>').append(
           // insert the rank in the new row.
           $('<td id = "rank"></td>').text(index+1),
+          // insert the image in the new row using template literal and a placeholder
+          $('<td id = "image"></td>').append(`<img src = "${imgCoin}" width="20" height="20">`),
           // insert the name in the new row.
           $('<td id = "name"></td>').text(coin[index].name),
           // insert the market cap in the new row.
@@ -51,4 +57,10 @@ async function createTable () {
 }
 }
 createTable();
+
+
+
+
+
+
 })

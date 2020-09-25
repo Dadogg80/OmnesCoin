@@ -29,23 +29,23 @@
    <div class="container my-container2">
      <div class="row justify-content-center my-row1">
        <div class="col-md-2 my-col1">
-         <a id="marketCap">Market Cap:</a>
+         <a id="mCap">Market Cap:</a>
        </div>
        <div class="col-md-2 my-col1">
          <a id="24hVol">24h Vol:</a>
        </div>
        <div class="col-md-2 my-col1">
-         <a id="btcDominance">BTC Dominance:</a>
+         <a id="btcDom">BTC Dominance:</a>
        </div>
        <div class="col-md-2 my-col1">
-         <a id="activeCrypto">Cryptocurrencies:</a>
+         <a id="activeCryp">Cryptocurrencies:</a>
        </div>
        <div class="col-md-2 my-col1">
-         <a id="totalMarkets">Markets:</a>
+         <a id="totalMark">Markets:</a>
        </div>
      </div>
 
-   </div>s
+   </div>
 
 <!-- This is the title -->
    <div class="container my-container3">
@@ -80,52 +80,52 @@
 
 <br><br>
 <!-- Here starts the main section of the page -->
-    <div class="container main-section">
+<div class="container main-section">
 <!--I am creating a Nav dropdown menu for all the Cryptocurrencies, exchanges and a Whatchlist -->
-      <ul class="nav nav-tabs">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cryptocurrencies</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Top 100</a>
-                <a class="dropdown-item" href="#">Full List</a>
-                <a class="dropdown-item" href="#">Derivatives</a>
-                <a class="dropdown-item" href="#">DeFi</a>
-                <a class="dropdown-item" href="#">Storage</a>
-                <a class="dropdown-item" href="#">Market Cap by Circulating Supply</a>
-                <a class="dropdown-item" href="#">Market Cap by Total Supply</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exchanges</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Spot Exchanges</a>
-                  <a class="dropdown-item" href="#">Derivatives Exchanges</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Whatchlist</a>
-              </li>
-        </ul>
+  <ul class="nav nav-tabs">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cryptocurrencies</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Top 100</a>
+            <a class="dropdown-item" href="#">Full List</a>
+            <a class="dropdown-item" href="#">Derivatives</a>
+            <a class="dropdown-item" href="#">DeFi</a>
+            <a class="dropdown-item" href="#">Storage</a>
+            <a class="dropdown-item" href="#">Market Cap by Circulating Supply</a>
+            <a class="dropdown-item" href="#">Market Cap by Total Supply</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Exchanges</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Spot Exchanges</a>
+              <a class="dropdown-item" href="#">Derivatives Exchanges</a>
+            </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Whatchlist</a>
+          </li>
+    </ul>
 
 <!--I am creating a Table class sticky to the top and follow the site when scrolling down  -->
 
 <div class="mytable">
 
-  <table id= "coinTable" class= "table sticky table-striped table-hover table-dark">
-
-  <tr>
-    <th id = "rank" scope="col-1">Rank</th>
-    <th id = "name" scope="col-2">Name</th>
-    <th id = "marketCap" scope="col-3">Market Cap</th>
-    <th id = "price" scope="col-1">Price</th>
-    <th id = "volume" scope="col-1">Volume (24H)</th>
-    <th id = "supply" scope="col-3">Circulating Supply</th>
-    <th id = "change24" scope="col-1">Change 24h</th>
-  </tr>
-
-</table>
+    <table id= "coinTable" class= "table sticky table-striped table-hover table-dark">
+      <tr>
+        <th id = "rank" scope="col-1">Rank</th>
+        <th id = "image" style="width:40px" scope="col-1"></th>
+        <th id = "name" scope="col-2">Name</th>
+        <th id = "marketCap" scope="col-3">Market Cap</th>
+        <th id = "price" scope="col-1">Price</th>
+        <th id = "volume" scope="col-1">Volume (24H)</th>
+        <th id = "supply" scope="col-3">Circulating Supply</th>
+        <th id = "change24" scope="col-1">Change 24h</th>
+      </tr>
+    </table>
 
 </div>
+
     </div>
 
 
