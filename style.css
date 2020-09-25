@@ -37,3 +37,9 @@ body {
   align-items: start;
   border: 3px ridge #f5e1f4;
 }
+
+.table.sticky th {
+  position: sticky;
+  top: 0;
+  background-color: black;
+}

@@ -62,9 +62,9 @@
        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
          <button type="button" class="btn btn-outline-info">Filters</button>
             <div class="btn-group" role="group">
-             <button id="btnGroupDrop1" type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD</button>
+             <button id="btnGroupDrop1" type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EUR</button>
                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                 <a class="dropdown-item" href="#">EUR</a>
+                 <a class="dropdown-item" href="#">USD</a>
                  <a class="dropdown-item" href="#">BTC</a>
                  <a class="dropdown-item" href="#">ETH</a>
                  <a class="dropdown-item" href="#">XRP</a>
@@ -107,63 +107,25 @@
               </li>
         </ul>
 
-<!--I am creating a Nav bar, it should stick to the top and follow the site when scrolling down but it should dissapear in a smaller screen -->
-        <nav class="navbar my-navbar navbar-light bg-light">
-            <div class="col-1 my-column">
-              <a class="stick">Rank</a>
-            </div>
-            <div class="col-2 my-column">
-              <a class="stick">Name</a>
-            </div>
-            <div class="col-2 my-column">
-              <a class="stick">Market Cap</a>
-            </div>
-            <div class="col-1 my-column">
-              <a class="stick">Price</a>
-            </div>
-            <div class="col-1 my-column">
-              <a class="stick">Volume (24h)</a>
-            </div>
-            <div class="col-2 my-column">
-              <a class="stick">Circulating Supply</a>
-            </div>
-            <div class="col-1 my-column">
-              <a class="stick">Change 24h</a>
-            </div>
-            <div class="col-2  my-column">
-              <a class="stick">Price Graph 24h</a>
-            </div>
-          </nav>
+<!--I am creating a Table class sticky to the top and follow the site when scrolling down  -->
 
-<br>
+<div class="mytable">
 
-<ul>
-  <li id="bitcoin"></li>
-  <li id="ethereum"></li>
-</ul>
+  <table id= "coinTable" class= "table sticky table-striped table-hover table-dark">
 
-<!--
-<ul>
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
-<ul>
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
-<ul>
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
-<ul>
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
-<ul>
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
-<ul>
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-</ul>
--->
+  <tr>
+    <th id = "rank" scope="col-1">Rank</th>
+    <th id = "name" scope="col-2">Name</th>
+    <th id = "marketCap" scope="col-3">Market Cap</th>
+    <th id = "price" scope="col-1">Price</th>
+    <th id = "volume" scope="col-1">Volume (24H)</th>
+    <th id = "supply" scope="col-3">Circulating Supply</th>
+    <th id = "change24" scope="col-1">Change 24h</th>
+  </tr>
 
+</table>
 
+</div>
     </div>
 
 
