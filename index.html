@@ -15,37 +15,29 @@
   <body>
 
 <!-- Created a container 1 with a navbar Brand and a search button -->
-    <div class="container my-container1">
+    <div class="d-flex flex-row container my-container1">
       <nav class="navbar navbar-light" >
         <a class="navbar-brand" id="my-brand">omnia</a>
-        <form class="form-inline">
+        <ul class="nav navbar-nav">
+      <li class="active"><a href="#">crypto data</a></li>
+
+    </ul>
+    <!--    <form class="form-inline">
           <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search Coin" aria-label="Search" >
           <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
         </form>
+    -->
       </nav>
     </div>
 
-<!-- Created a row with different columns to place the data needed  -->
-   <div class="container my-container2">
-     <div class="row justify-content-center my-row1">
-       <div class="col-md-2 my-col1">
-         <a id="mCap">Market Cap:</a>
-       </div>
-       <div class="col-md-2 my-col1">
-         <a id="24hVol">24h Vol:</a>
-       </div>
-       <div class="col-md-2 my-col1">
-         <a id="btcDom">BTC Dominance:</a>
-       </div>
-       <div class="col-md-2 my-col1">
-         <a id="activeCryp">Cryptocurrencies:</a>
-       </div>
-       <div class="col-md-2 my-col1">
-         <a id="totalMark">Markets:</a>
-       </div>
-     </div>
+<!--Created a Flex Box-->
+    <div id="myRow" class="d-flex flex-row my-container2">
+        <div class="p-2">Cryptocurrencies: <span id="currencies"></span></div>
+        <div class="p-2">Market Cap: <span id="mCap"></span></div>
+        <div class="p-2">24h Vol: <span id="24v"></span></div>
+        <div class="p-2">Markets: <span id="mark"></span></div>
+    </div>
 
-   </div>
 
 <!-- This is the title -->
    <div class="container my-container3">
