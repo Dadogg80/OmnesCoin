@@ -1,9 +1,13 @@
-# Omnia Crypto Data, My version of a Crypto Currency Exchange.
+# Omnia Crypto Data
+## My version of a Crypto Currency Exchange.
 
 **Version 1.0.0**
 
-Project following the assignment of a clone of Coin Market Cap from the Bootcamp Blockchain Developer Course on Ivan on Tech Academy.
-Data powered by Coingecko API
+Project assignment Clone of Coin Market Cap from the Bootcamp Blockchain Developer Course on Ivan on Tech Academy.
+
+## Links
+
+* Data powered by Coingecko API (https://www.coingecko.com/en/api)
 
 ---
 ## Contributors
