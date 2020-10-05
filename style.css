@@ -6,26 +6,31 @@
 font-family: 'Comfortaa';
 }
 body {
-  background-color:#f7f2f7;
+  background-color: #e8ddd8 !important;
 }
 #my-brand {
-  color:#8896cf;
+  color:#f7dcc6;
   font-family: 'Comfortaa', cursive;
   font-size: 30px;
 }
+#brand2 {
+  color:#8896cf;
+  font-size: 15px;
+}
 .title {
-  color: #8896cf;
+  color: #1a667d;
   font-family: 'Comfortaa', cursive;
 }
 .my-container1 {
-  background-color:#031413;
+  background-color:#152a4a;
 }
 .my-container2 {
-  padding: 10px;
-  border: 3px ridge #f5e1f4;
-  color: #8896cf;
+  padding: 1px;
+  color: #f5d5b0;
   justify-content: space-around;
-
+  font-size: 15px;
+  background: #0f3e57;
+  font-size: 12px;
 }
 .my-container3 {
   border: 10px;
@@ -35,21 +40,23 @@ body {
   color:#8896cf;
 }
 .my-container4 {
-  background-color: #dfc2e6
+  background-color: #f5d5b0;
 }
 .my-navbar {
   align-items: start;
   border: 3px ridge #f5e1f4;
 }
 
-.table.sticky th{
+.table.sticky th {
   position: sticky;
   top: 0;
-  background-color: black;
+  background-color: #152a4a;
+  color: #f5d5b0;
+  font-size: 13px;
 }
 
-.mytable td{
-  background: #212529 !important;
-    color: white !important;
-
+.mytable td {
+  background: #0f3e57 !important;
+  color: #f5d5b0;
+  font-size: 12px;
 }
